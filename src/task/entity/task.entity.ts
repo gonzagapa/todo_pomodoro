@@ -16,7 +16,7 @@ export class Task {
     @Column({type: 'enum', enum: TaskStatus, default:TaskStatus.PENDING})
     status: TaskStatus; 
 
-    @Column({type: 'int', default: 0})
+    @Column({type: 'int', default: 0, nullable:true})
     priority: number;
 
     @Column({type: 'timestamp', default:() =>'CURRENT_TIMESTAMP'})
